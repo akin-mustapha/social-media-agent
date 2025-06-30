@@ -1,2 +1,7 @@
 .idea
 .venv
+
+# Local configuration files
+config_local.py
+# Local environment variables
+.env
