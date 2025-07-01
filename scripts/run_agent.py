@@ -6,7 +6,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 # Import the necessary components from our structured project
 from src.agent.core.agent import create_social_media_agent
-from src.agent.utils.image_generation import generate_image_from_prompt
+from src.agent.utils.image_generation import generate_image
 from src.agent.adapters.x_adapter import post_to_x
 
 def main():
@@ -16,7 +16,7 @@ def main():
     print("--- Assembling Social Media Agent ---")
 
     # Define the list of tools the agent will have access to
-    available_tools = [generate_image_from_prompt, post_to_x]
+    available_tools = [generate_image, post_to_x]
 
     # Create the agent instance
     social_agent = create_social_media_agent(tools=available_tools)
@@ -26,7 +26,7 @@ def main():
         user_input = " ".join(sys.argv[1:])
     else:
         # Default prompt for testing if none is provided
-        user_input = "Generate a tweet about the beauty of Python programming. It should have a futuristic, abstract image. Make sure to thank the LangChain and Tweepy communities."
+        user_input = "Generate a tweet about the importance and benefits of collobrating with AI, abstract image. Make sure to indicate post was made by an AI."
 
     print(f"\n--- Running Agent with Input ---\n'{user_input}'\n")
 

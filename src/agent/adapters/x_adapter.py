@@ -5,7 +5,7 @@ from langchain_core.tools import tool
 
 # Import the base adapter and the config clients
 from .base_adapter import SocialMediaAdapter
-from agent.core import config
+from src.agent.core import config
 
 class XAdapter(SocialMediaAdapter):
     """Adapter for posting content to X (formerly Twitter)."""

@@ -7,6 +7,8 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
 # --- Twitter/X API Clients ---
 # It's good practice to initialize these once and reuse them.
 twitter_v2_client = tweepy.Client(
@@ -27,9 +29,9 @@ twitter_v1_api = tweepy.API(auth_v1)
 
 # --- LLM Clients ---
 # LLM for generating text (the agent's brain)
-text_gen_llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.7)
+text_gen_llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.7,google_api_key=os.getenv('GOOGLE_API_KEY'))
 
 # LLM for generating images
-image_gen_llm = ChatGoogleGenerativeAI(model="gemini-pro-vision")
+gemini_image_gen_llm = ChatGoogleGenerativeAI(model="imagen-4.0-generate-preview-06-06")
 
 print("Configuration loaded: API and LLM clients initialized.")
