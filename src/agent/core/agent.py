@@ -28,7 +28,7 @@ def create_social_media_agent(tools: list) -> AgentExecutor:
     Action: the action to take, should be one of [{tool_names}]
     Action Input: the input to the action
     Observation: the result of the action
-    ... (this Thought/Action/Action Input/Observation can repeat N times)
+    ... (this Thought/Action/Action Input/Observation can repeat N times. This Thought/Action/Action Input/Observation should stop when you have successfully posted on social media or after 2 times.)
     Thought: I now know the final answer
     Final Answer: the final answer to the original input question
 

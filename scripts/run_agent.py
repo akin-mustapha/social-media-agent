@@ -26,7 +26,7 @@ def main():
         user_input = " ".join(sys.argv[1:])
     else:
         # Default prompt for testing if none is provided
-        user_input = "Generate a tweet about the importance and benefits of collobrating with AI, abstract image. Make sure to indicate post was made by an AI."
+        user_input = "Generate a tweet about fight sleep when coding. Make it funny and engaging. Accompany it with anime image style. Make sure to indicate post was made by an AI."
 
     print(f"\n--- Running Agent with Input ---\n'{user_input}'\n")
 

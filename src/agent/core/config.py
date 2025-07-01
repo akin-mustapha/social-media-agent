@@ -34,4 +34,6 @@ text_gen_llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.7,go
 # LLM for generating images
 gemini_image_gen_llm = ChatGoogleGenerativeAI(model="imagen-4.0-generate-preview-06-06")
 
+selected_image_gen_llm = os.getenv('SELECTED_GENERATOR')
+
 print("Configuration loaded: API and LLM clients initialized.")
